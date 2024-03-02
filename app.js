@@ -39,13 +39,13 @@ iniciarNovoJogo();
 function gerarNumeroAleatorio() {
     let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
     let numeroDeElementosNaLista = listaNumerosEscolhidos.length;
-    if (numeroDeElementosNaLista == numeroLimite) { /* verifica se a lista já atingiu todos o elementos na lista, se sim: ela limpa a lista. */
+    if (numeroDeElementosNaLista == numeroLimite) { 
         listaNumerosEscolhidos = [];
     }
-    if (listaNumerosEscolhidos.includes(numeroEscolhido)) {  /* verifica se o número escolhido já está na lista, se não, ele retorna o número escolhido. */
+    if (listaNumerosEscolhidos.includes(numeroEscolhido)) {  
         return gerarNumeroAleatorio();
     } else {
-        listaNumerosEscolhidos.push(numeroEscolhido); /* adiciona o número escolhido na lista */
+        listaNumerosEscolhidos.push(numeroEscolhido); 
         console.log(listaNumerosEscolhidos);
         return numeroEscolhido;
     }
